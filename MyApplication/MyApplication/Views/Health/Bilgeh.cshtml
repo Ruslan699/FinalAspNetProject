@@ -1,0 +1,382 @@
+﻿@model  MyApplication.Models.ViewModels.BilgehPageModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Bilgeh</title>
+</head>
+<body>
+    <nav>
+
+
+        <div class="container">
+
+
+
+            <div class="navbar">
+
+
+                <a href="#" id="menu-icon"> <i class="fas fa-bars"></i> </a>
+
+                <a href="/About"> Haqqımızda </a>
+
+
+                <a href="/Azerbaijan"> Azərbaycan </a>
+
+
+
+                <a href="/Service"> Xidmətlər </a>
+
+
+
+                <a href="/Event"> Coming Events </a>
+
+
+
+                <a href="/OnlinePayment"> Online Odəniş </a>
+
+
+
+                <a href="/Contact">
+                    Əlaqə
+                </a>
+
+                <li class="sign">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+
+            </div>
+        </div>
+
+
+    </nav>
+
+
+    <section id="main">
+
+        <div class="col-sm-12">
+            <img src="~/images/@Model.BilgehPage.ImagePath">
+            <div class="title"> @Model.BilgehPage.ImageText </div>
+        </div>
+    </section>
+
+    <main>
+
+        <section id="tours">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <div class="country">
+                                @Model.BilgehPage.SubTitle →
+                            </div>
+                            <div class="panelRight">
+                                <div class="endingTime">
+                                    <div class="endTour">
+                                        Tur məlumatı:
+                                    </div>
+                                    <div class="time">
+                                        <i class="far fa-clock"></i>
+                                       @Model.BilgehPage.Duration
+                                    </div>
+
+                                </div>
+                                <div class="codeViews">
+                                    <div class="code">
+                                        Kod: @Model.BilgehPage.Code
+                                    </div>
+                                </div>
+
+                                <div class="price">
+                                    <div class="usd">
+                                        $@Model.BilgehPage.Price
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="heading">
+                                @Model.BilgehPage.Title
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="infoPanel">
+                            <div class="gallery">
+                                <div class="image">
+                                    <img src="~/images/@Model.BilgehPage.TourImage">
+                                </div>
+
+
+                            </div>
+
+                            <div class="buttonList">
+                                <div class="buttonItem">
+                                    <a href="@Model.BilgehPage.TourInformation">
+                                        <div class="icon">
+                                            <i class="fas fa-info"></i>
+                                        </div>
+                                        <span> <b>Məlumat </b> </span>
+                                    </a>
+                                </div>
+
+                                <div class="buttonItemVideo">
+
+                                    <a href="@Model.BilgehPage.TourVideo">
+
+                                        <div class="icon">
+                                            <i class="fas fa-video"></i>
+                                        </div>
+
+                                        <span> <b> Video </b> </span>
+                                    </a>
+                                </div>
+
+                                <div class="buttonItem">
+                                    <a href="@Model.BilgehPage.TourCheckIn">
+
+                                        <div class="icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+
+                                        <span> <b>Xəritədə Göstər</b> </span>
+
+
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="titleN">
+                                @Model.BilgehPage.TourName
+                            </div>
+                            <div class="textN">
+                                <p>
+                                    <span>@Model.BilgehPage.TourText</span>
+
+                                    <br>
+                                    <span> ------------ </span>
+                                    <br>
+                                    <span> Tarix: </span>
+                                    <br>
+                                    <span> @Model.BilgehPage.TourTime</span>
+                                    <br>
+                                    <span> ------- </span>
+                                    <br>
+                                    <span> Otel və Qiymətlər: </span>
+                                    <br>
+                                    <span> • Bilgəh Sanatoriyası – 700 azn </span>
+                                    <br>
+                                    <span> --------- </span>
+                                    <br>
+                                    <span> QİYMƏTƏ DAXİLDİR: </span>
+                                    <br>
+                                    @foreach (var item in Model.BilgehDescriptions)
+                                    {
+                                        <span> @item.AboutHotel </span>
+                                        <br>
+                                    }
+
+                                    <span> -------- </span>
+                                    <br>
+                                    <span> <b>Qeyd</b> </span>
+                                    <br>
+                                    <span> @Model.BilgehPage.TourAdditional </span>
+                                    <br>
+                                    <span> @Model.BilgehPage.TourAdditionalSecond </span>
+                                    <br>
+                                    <span> -------------- </span>
+                                    <br>
+                                    <span> BİZİMLƏ ƏLAQƏ: </span>
+                                    <br>
+                                    <span> @Model.BilgehPage.Number</span>
+                                    <br>
+                                    <span> @Model.BilgehPage.SecondNumber </span>
+                                    <br>
+                                    <span> Email: @Model.BilgehPage.Email </span>
+                                    <br>
+                                    <span> @Model.BilgehPage.SiteAddress</span>
+                                    <br>
+                                    <span> @Model.BilgehPage.Address </span>
+
+
+</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="additional">
+                            <div class="title">
+                                TUR HAQQINDA MƏLUMAT
+                            </div>
+                            <div class="section">
+                                <div class="name">
+                                    Otel
+                                </div>
+                                <div class="value">
+                                    <input type="radio" name="tour77" value="77:399" class="hotelPrice" id="t77699" checked>
+                                    <label for="t77699">
+
+                                        Bilgəh Sanatoriyası 4* —
+                                        <span class="usd"> $400 </span>
+                                    </label>
+                                </div>
+
+
+                            </div>
+                            <div class="section">
+                                <div class="labelFull">
+                                    Tura daxildir:
+                                </div>
+
+                                <div class="valueHalf">
+                                    <div class="icon">
+                                        <i class="fas fa-bed"></i>
+                                    </div>
+                                    <span> Otel </span>
+                                </div>
+
+                                <div class="valueHalf">
+                                    <div class="icon">
+                                        <i class="fas fa-utensils"></i>
+                                    </div>
+                                    <span> Yemək </span>
+                                </div>
+
+                                <div class="valueHalf">
+                                    <div class="icon">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                    <span> Transfer </span>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <!--<div class="valueEnd">
+                                    <span class="black">
+                                    BUNDAN AŞAĞI QİYMƏT TAPMISIZ? BİZƏ BİLDİRİN BİZ DAHA SƏRFƏLİ QİYMƏT TƏQDİM EDƏK! </span>
+                                </div> -->
+                            </div>
+                            <div class="actions">
+                                <a href="/Bron/Bilgeh" class="buttonOrder">
+
+                                    Bron Et
+                                </a>
+                            </div>
+                        </div>
+                        <div class="help">
+                            <div class="title">
+                                KÖMƏK LAZIMDI?
+                            </div>
+                            <div class="text">
+                                @Model.BilgehPage.AboutTourText
+                            </div>
+                            <div class="links">
+                                <div class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <span> @Model.BilgehPage.AboutTourNumber </span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="contacts">
+
+        <div class="container">
+
+            <form name="sendmessage">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="titleWrite">
+
+                            BİZƏ YAZIN
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <label for="lname"> Ad </label>
+                        <input type="text" name="lname" id="name" placeholder="Adınızı daxil edin">
+                    </div>
+                    <div class="col-md-4">
+
+                        <label for="lsurname"> Soyad </label>
+                        <input type="text" name="lsurname" id="surname" placeholder="Soyadınızı daxil edin">
+                    </div>
+                    <div class="col-md-4">
+
+                        <label for="lsurname"> Email </label>
+                        <input type="text" name="email" id="email" placeholder="Email ünvanınızı daxil edin">
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <label for="number"> Mobil Nömrəniz </label>
+                        <input type="number" id="number" name="number" pattern="[0-9]{3}-[2-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Mobil nömrənizi daxil edin">
+                    </div>
+
+
+                    <div class="col-md-8">
+                        <label for="text"> Mesajınız</label>
+                        <textarea name="text" id="message" placeholder="Mesajınızı daxil edin"></textarea>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="submitBtn">
+                            <input type="submit" class="button" id="button" value="Məktubu göndərin" data-loading="YÜklənir">
+
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+    </section>
+    @section script {
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: "/Home/Footer",
+                    method: "get",
+                    success: function (re) {
+
+                        $(".same").append(re.addreses);
+                        $(".sameTwo").append(re.faxes);
+                        $(".sameThree").append(re.numbers);
+                        $(".sameFour").append(re.mails);
+                        $(".sameFive").append(re.siteadress);
+                        $("#titleee").append(re.title);
+                        $(".longText").append(re.desciption);
+                    }
+                })
+            })
+
+        </script>
+    }
+</body>
+</html>

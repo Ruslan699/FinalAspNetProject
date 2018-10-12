@@ -1,0 +1,255 @@
+﻿@model MyApplication.Models.ViewModels.BronQakhModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Qakh</title>
+</head>
+<body>
+    <nav>
+
+
+        <div class="container">
+
+
+
+            <div class="navbar">
+
+
+                <a href="#" id="menu-icon"> <i class="fas fa-bars"></i> </a>
+
+                <a href="/About"> Haqqımızda </a>
+
+
+                <a href="/Azerbaijan"> Azərbaycan </a>
+
+
+
+                <a href="/Service"> Xidmətlər </a>
+
+
+
+                <a href="/Event"> Coming Events </a>
+
+
+
+                <a href="/OnlinePayment"> Online Odəniş </a>
+
+
+
+                <a href="/Contact">
+                    Əlaqə
+                </a>
+
+                <li class="sign">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+
+            </div>
+        </div>
+
+
+    </nav>
+
+
+    <section id="main">
+
+        <div class="col-sm-12">
+            <img src="~/images/@Model.BronInfo.ImagePath">
+            <div class="title">@Model.BronInfo.ImageText </div>
+        </div>
+    </section>
+
+    <main>
+
+        <section id="bronInfo">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <section class="contacts">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="title">
+                                        Şəxsi Məlumat
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    @Html.AntiForgeryToken()
+                                    <label for="lname"> Ad </label>
+                                    <input type="text" id="bName" name="lname" placeholder="Adınızı daxil edin">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lsurname"> Soyad </label>
+                                    <input type="text" id="bSurname" name="lsurname" placeholder="Soyadınızı daxil edin">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lsurname"> Email </label>
+                                    <input type="text" id="bEmail" name="email" placeholder="Email ünvanınızı daxil edin">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="number"> Mobil Nömrəniz </label>
+                                    <input type="number" id="bNumber" name="number" pattern="[0-9]{3}-[2-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Mobil nömrənizi daxil edin">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="DateTime"> Turun Vaxtı </label>
+                                    <input type="datetime-local" id="datetim">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="text">
+                                        Əlavə qeydlər
+                                    </label>
+                                    <textarea name="additional" id="message" placeholder="Əlavə suallarızı bu xanada qeyd edə bilərsiniz"></textarea>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="actionsLeft">
+                                        <a href="" id="btnFinish" class="btnFinishOrder"> Turu Bron Et </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="additional">
+                            <div class="title">
+                                TUR HAQQINDA MƏLUMAT
+                            </div>
+
+                            <div class="section">
+                                <div class="sectionText">
+
+                                    <span style="font-size:15px"><b>Turu Seçin</b></span>
+                                </div>
+                                <div class="value">
+                                    <input type="radio" name="tour77" value="Qakh" class="hotelPrice" id="qakh">
+                                    <label for="t77699">
+                                        Qax - 
+                                        <span class="usd"> $200 </span>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="section">
+                                <div class="labelFull">
+                                    Tura daxildir:
+                                </div>
+
+                                @foreach (var item in Model.SimiliarTours)
+                                {
+                                    <div class="valueHalf">
+                                        <div class="icon">
+                                            <i class="@item.AboutTourIcon"></i>
+                                        </div>
+                                        <span> @item.AboutTourText </span>
+                                    </div>
+                                }
+
+                            </div>
+                            <div class="section">
+                                <!--<div class="valueEnd">
+            <span class="black">
+            BUNDAN AŞAĞI QİYMƏT TAPMISIZ? BİZƏ BİLDİRİN BİZ DAHA SƏRFƏLİ QİYMƏT TƏQDİM EDƏK! </span>
+        </div> -->
+                            </div>
+
+                        </div>
+                        <div class="help">
+                            <div class="title">
+                                KÖMƏK LAZIMDI?
+                            </div>
+                            <div class="text">
+                                @Model.BronInfo.AboutTourText
+                            </div>
+                            <div class="links">
+                                <div class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <span> @Model.BronInfo.AboutTourNumber</span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+        </section>
+        @section script {
+            <script>
+                $(document).ready(function () {
+                    $.ajax({
+                        url: "/Home/Footer",
+                        method: "get",
+                        success: function (re) {
+
+                            $(".same").append(re.addreses);
+                            $(".sameTwo").append(re.faxes);
+                            $(".sameThree").append(re.numbers);
+                            $(".sameFour").append(re.mails);
+                            $(".sameFive").append(re.siteadress);
+                            $("#titleee").append(re.title);
+                            $(".longText").append(re.desciption);
+                        }
+                    })
+
+                    let a = 0;
+                    $(".hotelPrice").click(function () {
+                        a = $(this).val()
+                    });
+                    $("#btnFinish").click(function () {
+                        let name = $("#bName").val();
+                        let surname = $("#bSurname").val();
+                        let email = $("#bEmail").val();
+                        let phone = $("#bNumber").val();
+                        let message = $("#message").val();
+                        let tour = $("#qakh").val();
+                        let time = $("#datetim").val();
+                        let __RequestVerificationToken = $("input[name='__RequestVerificationToken']").val();
+                        $.ajax({
+                            url: "/Bron/Qakh",
+                            data: {
+                                Name: name,
+                                Surname: surname,
+                                Email: email,
+                                Number: phone,
+                                Message: message,
+                                Tour: a,
+                                DateTime: time,
+                                __RequestVerificationToken: __RequestVerificationToken
+                            },
+                            method: "post",
+                            success: function (re) {
+
+                                alert('You Bronned This Tour');
+                            },
+                            error: function (re) {
+                                alert('Error');
+                            }
+                        })
+                    })
+                });
+
+            </script>
+        }
+</body>
+</html>

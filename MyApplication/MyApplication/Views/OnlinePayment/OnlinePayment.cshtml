@@ -1,0 +1,152 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<body>
+    <nav>
+        <div class="container">
+
+            <div class="navbar">
+
+                <a href="#" id="menu-icon"> <i class="fas fa-bars"></i> </a>
+
+                <a href="/About"> Haqqımızda </a>
+
+                <a href="/Azerbaijan"> Azərbaycan </a>
+
+                <a href="/Service"> Xidmətlər </a>
+
+                <a href="/Event"> Coming Events </a>
+
+                <a href="/OnlinePayment"> Online Odəniş </a>
+
+                <a href="/Contact">
+                    Əlaqə
+                </a>
+
+
+                <li class="sign">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="panel panel-default credit-card-box">
+                    <div class="panel-heading display-table">
+                        <div class="row display-tr">
+                            <h3 class="panel-title display-td">Payment Details</h3>
+                            <div class="display-td">
+                                <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" id="payment-form" method="POST" action="javascript:void(0);">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="cardNumber">CARD NUMBER</label>
+                                        <div class="input-group">
+                                            <input type="tel"
+                                                   class="form-control"
+                                                   name="cardNumber"
+                                                   placeholder="Valid Card Number"
+                                                   autocomplete="cc-number"
+                                                   required autofocus />
+                                            <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-7 col-md-7">
+                                    <div class="form-group">
+                                        <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                        <input type="tel"
+                                               class="form-control"
+                                               name="cardExpiry"
+                                               placeholder="MM / YY"
+                                               autocomplete="cc-exp"
+                                               required />
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 col-md-5 pull-right">
+                                    <div class="form-group">
+                                        <label for="cardCVC">CV CODE</label>
+                                        <input type="tel"
+                                               class="form-control"
+                                               name="cardCVC"
+                                               placeholder="CVC"
+                                               autocomplete="cc-csc"
+                                               required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="couponCode">COUPON CODE</label>
+                                        <input type="text" class="form-control" name="couponCode" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <button class="subscribe btn btn-success btn-lg btn-block" type="submit">Start Subscription</button>
+                                </div>
+                            </div>
+                            <div class="row" style="display:none;">
+                                <div class="col-xs-12">
+                                    <p class="payment-errors"></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    @section script {
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: "/Home/Footer",
+                    method: "get",
+                    success: function (re) {
+
+                        $(".same").append(re.addreses);
+                        $(".sameTwo").append(re.faxes);
+                        $(".sameThree").append(re.numbers);
+                        $(".sameFour").append(re.mails);
+                        $(".sameFive").append(re.siteadress);
+                        $("#titleee").append(re.title);
+                        $(".longText").append(re.desciption);
+                    }
+                })
+            })
+
+        </script>
+    }
+</body>
+
+

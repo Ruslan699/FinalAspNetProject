@@ -1,0 +1,370 @@
+#tours
+	{
+		padding: 25px 0;
+	}
+
+	#tours .panel
+	{
+		display: block;
+		flex-direction: column;
+		padding: 20px 0;
+	}
+
+	#tours .panel .country
+	{
+		color: #b8b9b9;
+   	 	font-size: 12px;
+    	order: -2;
+	}
+
+	#tours .panelRight
+	{
+		align-items: flex-end;
+    	display: flex;
+    	float: right;
+    	justify-content: space-between;
+    	line-height: 1;
+	}
+
+	#tours .endingTime
+	{
+		display: inline-block;
+		margin-right: 100px;
+		
+	}
+
+
+	#tours .endTour
+	{
+		color: #b8b9b9;
+    font-size: 12px;
+    white-space: nowrap;
+	}
+
+	#tours .time
+	{
+		align-items: center;
+    color: #e79623;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: space-around;
+	}
+
+	#tours .codeViews
+	{
+		align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    justify-content: flex-start;
+    margin-right: 80px;
+	}
+
+	#tours .code
+	{
+		    color: #e79623;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+	}
+
+	#tours .price
+	{
+		display: inline-block;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+	}
+
+	#tours .heading
+	{
+	align-items: flex-end;
+    display: flex;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: auto;
+	}
+
+
+	.infoPanel .gallery .image
+	{
+		    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+    position: relative;
+	}
+
+	.infoPanel .gallery .image img
+	{
+		width: 100%;
+	}
+
+
+.buttonList
+{
+	align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonList .buttonItem
+{
+	color: #353d4d;
+    font-size: 12px;
+    padding: 20px 0 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.buttonList a
+{
+	    border: 0;
+    color: #353d4d;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.buttonList .buttonItem .icon
+{
+	display: inline-block;
+	margin-right: 5px;
+	color:#e79623;
+}
+
+.buttonList .buttonItemVideo
+{
+	color: #353d4d;
+    font-size: 12px;
+    padding: 20px 0 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.buttonList .buttonItemVideo .icon
+{
+	display: inline-block;
+	margin-right: 5px;
+	color:#e79623;
+}
+
+#tours .titleN
+{
+	    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 0 0;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+#tours .textN
+{
+	    font-size: 14px;
+    	padding: 5px 0;
+}
+
+
+.icon .fa-phone
+    {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+
+
+    }
+
+    #tours .additional
+    {
+    	background: #faf9fa;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 25px;
+    }
+
+    #tours .additional .title
+    {
+    	    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    }
+
+    #tours .additional .section
+    {
+    	overflow: hidden;
+   	 padding: 10px 0;
+    }
+
+
+
+ #tours .additional .section .name
+ {
+ 	color: #353d4d;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+ }
+
+ #tours .section .value
+ {
+ 	    align-items: center;
+    color: #e79623;
+    display: flex;
+    position: relative;
+    text-transform: uppercase;
+ }
+
+ #tours .additional label
+ {
+ 	    margin: 5px;
+    padding-left: 5px;
+ }
+
+ #tours .additional .labelFull
+ {
+ 	display: block;
+ 	color: #353d4d;
+    font-weight: 700;
+    text-transform: uppercase;
+ }
+
+ #tours .additional .valueHalf
+ {
+ 	    align-items: center;
+    color: #e79623;
+    display: flex;
+    position: relative;
+    text-transform: uppercase;
+        float: left;
+    width: 50%;
+ }
+
+ #tours .additional .icon
+ {
+ 	display: inline-block;
+    margin-right: 10px;
+ }
+
+ #tours .additional .icon i
+ {
+ 	color: black;
+ }
+
+ #tours .black
+ {
+ 	    color: #353d4d;
+ }
+
+ #tours .additional .actions
+ {
+ 	    font-size: 14px;
+    font-weight: 700;
+    padding-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+ }
+
+  #tours .additional .actions .buttonOrder
+  {
+  	background: #e79623;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  #tours .help
+  {
+  	    background: #f8f7fa;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 0;
+    padding: 25px;
+    position: relative;
+  }
+
+  #tours .help .title
+  {
+  	    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  #tours .help .text
+  {
+  	    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  #tours .links
+  {
+  	    color: #000;
+    display: block;
+    font-size: 14px;
+    margin: 10px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+#tours .links .icon
+{
+	    display: inline-block;
+    height: 30px;
+    margin-right: 10px;
+    width: 30px;
+   
+
+}
+
+#tours .links span
+{
+	margin-left: -20px;
+}
+
+#tours .links .icon i
+{
+	 color:#e79623;
+}
+
+@media screen and(max-width:550px)
+{
+    #tours .endTour
+    {
+        margin-right: 143px;
+    }
+
+    #tours .time
+    {
+        margin-left: 70px;
+    }
+
+    #tours .code
+    {
+        display: none;
+    }
+
+
+    #tours .time
+    {
+        display: none;
+    }
+
+   
+
+    #tours .price
+    {
+        margin-left:-100px;
+       
+    }
+}

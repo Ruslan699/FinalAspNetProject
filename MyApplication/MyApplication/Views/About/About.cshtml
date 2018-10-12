@@ -1,0 +1,174 @@
+﻿@model MyApplication.Models.About
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>About</title>
+</head>
+<body>
+    <!-- Begin NavBar -->
+    <nav>
+
+
+        <div class="container">
+
+
+
+            <div class="navbar">
+
+
+                <a href="#" id="menu-icon"> <i class="fas fa-bars"></i> </a>
+
+                <a href="/About"> Haqqımızda </a>
+
+
+                <a href="/Azerbaijan"> Azərbaycan </a>
+
+
+
+                <a href="/Service"> Xidmətlər </a>
+
+
+
+                <a href="/Event"> Coming Events </a>
+
+
+
+                <a href="/OnlinePayment"> Online Odəniş </a>
+
+
+
+                <a href="/Contact">
+                    Əlaqə
+                </a>
+
+
+                <li class="sign">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook">
+
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+
+            </div>
+        </div>
+
+
+    </nav>
+
+    <div class="col-sm-12">
+        <div id="full">
+            <img src="~/images/@Model.ImagePath">
+            <h3> @Model.ImageTitle </h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-md-12">
+            <div id="title">
+
+                <h4> @Model.Title </h4>
+                <h6> REST TRAVEL </h6>
+                <p>
+                 @Html.Raw(@Model.Text)
+                </p>
+
+                <p> @Model.SubText </p>
+            </div>
+        </div>
+    </div>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+
+                    <div class="infos">
+                        <a href="About/Profile">
+                            <div class="image">
+                                <img src="images/company.png">
+                            </div>
+                            <div class="title"> Şirkət Profili </div>
+                            <div class="text"> Sizin səyahətiniz bizim işimizdir. </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+
+                    <div class="infos">
+                        <a href="About/WhyWe">
+                            <div class="image">
+                                <img src="images/question.jpg">
+                            </div>
+                            <div class="title"> NIYƏ BİZ? </div>
+                            <div class="text"> Hər addımda yanınızda və yardıma hazır. </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+
+                    <div class="infos">
+                        <a href="About/Compliance">
+                            <div class="image">
+                                <img src="images/message.png">
+                            </div>
+                            <div class="title"> Şikayət və Təklif </div>
+                            <div class="text"> Hər hansı müraciyətiniz varsa bizə məktub göndərə bilərsiniz. </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+
+                    <div class="infos">
+                        <a href="About/Vip">
+                            <div class="image">
+                                <img src="~/images/vip.png">
+                            </div>
+                            <div class="title"> VIP Xidmətləri </div>
+                            <div class="text"> VİP sahəsində Azərbaycanda Nömrə 1 Servis Xidməti. </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @section script {
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: "/Home/Footer",
+                    method: "get",
+                    success: function (re) {
+
+                        $(".same").append(re.addreses);
+                        $(".sameTwo").append(re.faxes);
+                        $(".sameThree").append(re.numbers);
+                        $(".sameFour").append(re.mails);
+                        $(".sameFive").append(re.siteadress);
+                        $("#titleee").append(re.title);
+                        $(".longText").append(re.desciption);
+                    }
+                })
+            })
+
+        </script>
+    }
+</body>
+</html>

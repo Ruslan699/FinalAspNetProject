@@ -1,0 +1,55 @@
+﻿@model MyApplication.Models.MainPage
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MainPage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TourImage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TourImage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TourName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TourName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TourPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TourPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TourTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TourTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TourAction)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TourAction)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TourDuration)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TourDuration)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

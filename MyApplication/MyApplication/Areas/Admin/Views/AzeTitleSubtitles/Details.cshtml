@@ -1,0 +1,79 @@
+﻿@model MyApplication.Models.AzeTitleSubtitle
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AzeTitleSubtitle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstSlide)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstSlide)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstSlideText)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstSlideText)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondSlide)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondSlide)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondSlideText)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecondSlideText)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ThirdSlide)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ThirdSlide)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ThirdSlideText)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ThirdSlideText)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FourthSlide)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FourthSlide)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FourthSlideText)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FourthSlideText)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SubTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SubTitle)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,67 @@
+#footerF{
+	margin-top: 0px;
+	background-color: #727272;
+	color:white;
+	width: 100%;
+	font-size: 13px;
+	font-family: "Courgette";
+}
+
+#footerF a{
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	font-family: "Courgette";
+}
+
+#footerF hr{
+	border-color: rgba(252, 252, 252, 0.2);
+	width: 300px;
+    margin-left: -40px;
+}
+
+#footerF .fa-caret-right{
+	margin-left: -10px;
+}
+
+#veSon h5{
+	margin-left: 80px;
+	font-size: 18px;
+}
+#veSon p{
+	text-align: center;
+}
+
+#veSon img
+{
+	width: 100px;
+	height: 100px;
+}
+
+#sonSon{
+	background: #564f4f;
+	width: 100%;
+}
+
+#sonSon i {
+	padding: 6px;
+    float: left;
+    color: rgba(35, 34, 34, 0.4);
+}
+
+
+#sonSon i:hover{
+	transition: 1s ease;
+	color:white;
+}
+
+#hover i:hover{
+	transition: 0.8s ease;
+	margin-left: 10px;
+}
+
+#hover a:hover{
+	transition: 0.8s ease;
+	color:rgba(224, 225, 226, 0.8);
+	margin-left: 10px;
+}

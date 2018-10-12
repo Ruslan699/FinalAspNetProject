@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+
+
+    <html version="HTML+RDFa 1.1" lang="az">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" shrink-to-fit="no" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <meta name="viewport" content="width=device-width, initial-scale = 1">
+        <meta name="viewport" content="width=device-width" />
+        <title>Tours</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="~/css/app.css">
+
+
+
+    </head>
+    <body>
+        <div>
+            @RenderBody()
+
+        </div>
+        <section id="footerF">
+            <!--Footer-->
+            <footer class="page-footer font-small mdb-color lighten-3 pt-4 mt-4">
+
+                <!--Footer Links-->
+                <div class="container text-center text-md-left">
+                    <div class="row my-4">
+
+                        <!--First column-->
+                        <div class="col-md-4 sa">
+                            <h5 class="text-uppercase mb-4 font-weight-bold">Ünvan və Əlaqə </h5>
+                            <!--Info-->
+                            <p class="same">
+                                <i class="fa fa-location-arrow mr-3"></i>
+                            </p>
+                            <p class="sameThree">
+                                <i class="fa fa-phone mr-3"></i>
+                            </p>
+                            <p class="sameTwo">
+                                <i class="fa fa-print mr-3"></i>
+                            </p>
+
+                            <p class="sameFour">
+                                <i class="fa fa-envelope mr-3"></i>
+                            </p>
+
+                            <p class="sameFive">
+                                <i class="fab fa-weixin mr-3"></i>
+                            </p>
+                        </div>
+                        <!--/.First column-->
+
+                        <hr class="clearfix w-100 d-md-none">
+
+                        <!--Second column-->
+                        <div class="col-md-4 ml-auto may" id="hover">
+                            <h5 class="text-uppercase mb-4 font-weight-bold">Xidmətlərimiz</h5>
+                            <ul class="list-unstyled">
+                                <p>
+                                    <i class="fas fa-caret-right mr-3"></i>
+                                    <a href="/Service/Transfer">Transferlər</a>
+                                    <hr>
+                                </p>
+                                <p>
+                                    <i class="fas fa-caret-right mr-3"></i>
+                                    <a href="/Service/Incoming">Daxili Turlar</a>
+                                    <hr>
+                                </p>
+                                <p>
+                                    <i class="fas fa-caret-right mr-3"></i>
+                                    <a href="/Event">Coming Events</a>
+                                    <hr>
+                                </p>
+                                <p>
+                                    <i class="fas fa-caret-right mr-3"></i>
+                                    <a href="/Service/Cruiz">Kruiz Turlar</a>
+                                    <hr>
+                                </p>
+                            </ul>
+                        </div>
+                        <!--/.Second column-->
+
+                        <hr class="clearfix w-100 d-md-none">
+
+                        <!--Third column-->
+                        <div class="col-md-4" id="veSon">
+                            <h5 class="text-uppercase mb-4 font-weight-bold" id="titleee"></h5>
+                            <!--Info-->
+                            <p>
+                                <img class="images" src="~/images/@ViewBag.Setting.Icon">
+                            </p>
+                            <p class="longText">
+
+                            </p>
+                        </div>
+                        <!--/.Third column-->
+                        <!--Copyright-->
+                        <div class="col-md-12" id="sonSon">
+                            <div class="footer-copyright py-3 text-center">
+                                @if (ViewBag.Setting.Facebook != null)
+                                {
+                                    <a href="@ViewBag.Setting.Facebook"> <i class="fab fa-facebook-f"></i> </a>
+                                }
+
+                                @if (ViewBag.Setting.Twitter != null)
+                                {
+                                    <a href="@ViewBag.Setting.Twitter"> <i class="fab fa-twitter"></i> </a>
+
+                                }
+
+                                @if (ViewBag.Setting.Linkedin != null)
+                                {
+                                    <a href="@ViewBag.Setting.Linkedin"> <i class="fab fa-linkedin-in"></i> </a>
+
+                                }
+                                Bizi seçdiyiniz üçün təşəkkür edirik. Bütün hüquqlarınız tam qorunur.
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Copyright-->
+
+            </footer>
+        </section>
+        </div>
+        <!--/.Footer-->
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="~/js/main.js"></script>
+        @RenderSection("script", false)
+        @section script {
+            <script>
+                $(document).ready(function () {
+                    $.ajax({
+                        url: "/Home/Footer",
+                        method: "get",
+                        success: function (re) {
+                            $(".same").append(re.addreses);
+                            $(".sameTwo").append(re.faxes);
+                            $(".sameThree").append(re.numbers);
+                            $(".sameFour").append(re.mails);
+                            $(".sameFive").append(re.siteadress);
+                            $("#titleee").append(re.title);
+                            $(".longText").append(re.desciption);
+
+                        }
+                    })
+                })
+
+            </script>
+        }
+
+        <partial name="_ValidationScriptsPartial.cshtml" />
+    </body>
+</html>

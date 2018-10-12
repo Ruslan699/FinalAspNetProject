@@ -1,0 +1,137 @@
+﻿@model MyApplication.Models.WhyWe
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WhyWe</title>
+</head>
+<body>
+    <nav>
+
+
+        <div class="container">
+
+
+
+            <div class="navbar">
+
+
+                <a href="#" id="menu-icon"> <i class="fas fa-bars"></i> </a>
+
+                <a href="/About"> Haqqımızda </a>
+
+
+                <a href="/Azerbaijan"> Azərbaycan </a>
+
+
+
+                <a href="/Service"> Xidmətlər </a>
+
+
+
+                <a href="/Event"> Coming Events </a>
+
+
+
+                <a href="/OnlinePayment"> Online Odəniş </a>
+
+
+
+                <a href="/Contact">
+                    Əlaqə
+                </a>
+                <li class="sign">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook">
+
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+
+            </div>
+        </div>
+
+
+    </nav>
+
+    <section id="main">
+
+        <div class="col-sm-12">
+            <img src="~/images/@Model.ImagePath">
+        </div>
+
+    </section>
+
+    <main>
+        <section id="subMain">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="proposalTitle">
+                         @Model.Title
+                        </div>
+                        <div class="proposalSubTitle">
+                           @Model.SubTitle
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="staticText">
+                            <p>
+                                <span> 1. <strong>Büdcəniz üçün ən uyğun qiymətlər.</strong></span><br>
+                                <span> Biz sizə səyahətiniz üzrə bütün variantlar haqqında, xüsusi kampaniyalar haqqında və müəyyən bir məhsulun keyfiyyətinə dair məlumat verəcəyik və siz öz istəyinizə uyğun səyahət paketini seçə bilərsiniz. </span>
+                            </p>
+                            <p>
+                                <span> 2. <strong>Rahat bir universal satış.</strong></span><br>
+                                <span> Sizin səfərinizin hər bir istiqamətini - aviaşirkətlərdən avtomobil icarəyə götürməyinizə və yaşayış yerlərindən biznes görüşlərədək proqramlar hazırlayaraq vaxtınıza və pulunuza qənaət edəcəyik. </span>
+                            </p>
+                            <p>
+                                <span> 3. <strong>Səyahət ekspertləri.</strong></span><br>
+                                <span> Bizim mütəxəssislər sizin səyahət etmək istədiyiniz istiqamət üzrə iqlim, siyasi və turizm üzrə sizi məlumatlandıraraq səyahətinizin daha komfortlu olmasını təmin edirlər.</span>
+                            </p>
+                            <p>
+                                <span> 4. <strong>Maksimum seçim.</strong></span><br>
+                                <span> Biz sizin səyahətiniz üçün ən geniş seçim imkanları təqdim edirik.</span>
+                            </p>
+                            <p>
+                                <span> 5. <strong>Güvən.</strong></span><br>
+                                <span>2017-ci ildən bugünədək fəaliyyət göstərdiyimiz müddətdə göstərdiyimiz şəffaf və keyfiyyətli xidmətimizlə müştərilərimizin güvənini qazanmışıq. Biz, digər şirkətlərdən fərqli olaraq müştərilərimizə yüksək səviyyəli xidmət göstərmək üçün hər fəsildə sinizləyik.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @section script {
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: "/Home/Footer",
+                    method: "get",
+                    success: function (re) {
+
+                        $(".same").append(re.addreses);
+                        $(".sameTwo").append(re.faxes);
+                        $(".sameThree").append(re.numbers);
+                        $(".sameFour").append(re.mails);
+                        $(".sameFive").append(re.siteadress);
+                        $("#titleee").append(re.title);
+                        $(".longText").append(re.desciption);
+                    }
+                })
+            })
+
+        </script>
+    }
+</body>
+</html>

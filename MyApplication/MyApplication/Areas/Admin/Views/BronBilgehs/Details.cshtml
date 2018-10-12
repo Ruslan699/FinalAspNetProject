@@ -1,0 +1,43 @@
+﻿@model MyApplication.Models.BronBilgeh
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BronBilgeh</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ImagePath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ImageTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AboutTourText)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AboutTourText)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AboutTourNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AboutTourNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

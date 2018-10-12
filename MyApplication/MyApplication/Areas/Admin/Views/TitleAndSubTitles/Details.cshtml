@@ -1,0 +1,55 @@
+﻿@model MyApplication.Models.TitleAndSubTitle
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TitleAndSubTitle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StaticPage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StaticPage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ImagePath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageText)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ImageText)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SubTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SubTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model._IsService)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model._IsService)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

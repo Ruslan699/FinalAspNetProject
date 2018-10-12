@@ -1,0 +1,372 @@
+﻿@model MyApplication.Models.ViewModels.GoyGolPageModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GoyGol</title>
+</head>
+<body>
+    <nav>
+
+
+        <div class="container">
+
+
+
+            <div class="navbar">
+
+
+                <a href="#" id="menu-icon"> <i class="fas fa-bars"></i> </a>
+
+                <a href="/About"> Haqqımızda </a>
+
+
+                <a href="/Azerbaijan"> Azərbaycan </a>
+
+
+
+                <a href="/Service"> Xidmətlər </a>
+
+
+
+                <a href="/Event"> Coming Events </a>
+
+
+
+                <a href="/OnlinePayment"> Online Odəniş </a>
+
+
+
+                <a href="/Contact">
+                    Əlaqə
+                </a>
+
+                <li class="sign">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+
+            </div>
+        </div>
+
+
+    </nav>
+
+
+    <section id="main">
+
+        <div class="col-sm-12">
+            <img src="~/images/@Model.GoyGolPage.ImagePath">
+            <div class="title"> @Model.GoyGolPage.ImageText </div>
+        </div>
+    </section>
+
+    <main>
+
+        <section id="tours">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <div class="country">
+                                @Model.GoyGolPage.SubTitle →
+                            </div>
+                            <div class="panelRight">
+                                <div class="endingTime">
+                                    <div class="endTour">
+                                        Tur məlumatı:
+                                    </div>
+                                    <div class="time">
+                                        <i class="far fa-clock"></i>
+                                        @Model.GoyGolPage.Duration
+                                    </div>
+
+                                </div>
+                                <div class="codeViews">
+                                    <div class="code">
+                                        Kod: @Model.GoyGolPage.Code
+                                    </div>
+                                </div>
+
+                                <div class="price">
+                                    <div class="usd">
+                                        $@Model.GoyGolPage.Price
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="heading">
+                                @Model.GoyGolPage.Title
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="infoPanel">
+                            <div class="gallery">
+                                <div class="image">
+                                    <img src="~/images/@Model.GoyGolPage.TourImage">
+                                </div>
+                            </div>
+
+                            <div class="buttonList">
+                                <div class="buttonItem">
+                                    <a href="@Model.GoyGolPage.TourInformation">
+                                        <div class="icon">
+                                            <i class="fas fa-info"></i>
+                                        </div>
+                                        <span> <b>Məlumat </b> </span>
+                                    </a>
+                                </div>
+
+                                <div class="buttonItemVideo">
+
+                                    <a href="@Model.GoyGolPage.TourVideo">
+
+                                        <div class="icon">
+                                            <i class="fas fa-video"></i>
+                                        </div>
+
+                                        <span> <b> Video </b> </span>
+                                    </a>
+                                </div>
+
+                                <div class="buttonItem">
+                                    <a href="@Model.GoyGolPage.TourCheckIn">
+
+                                        <div class="icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+
+                                        <span> <b>Xəritədə Göstər</b> </span>
+
+
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="titleN">
+                                @Model.GoyGolPage.TourName
+                            </div>
+                            <div class="textN">
+                                <p>
+                                    <span> @Model.GoyGolPage.TourText</span>
+
+                                    <br>
+                                    <span> ------------ </span>
+                                    <br>
+                                    <span> Tarix: </span>
+                                    <br>
+                                    <span> @Model.GoyGolPage.TourTime </span>
+                                    <br>
+                                    <span> ------- </span>
+                                    <br>
+                                    <span> QİYMƏTƏ DAXİLDİR: </span>
+                                    <br>
+                                    @foreach (var item in Model.GoyGolDescriptions)
+                                    {
+                                        <span> @item.TourInclude </span>
+                                        <br>
+                                    }
+                                    <span> -------- </span>
+                                    <br>
+                                    <span> <b>Qeyd</b> </span>
+                                    <br>
+                                    <span> @Model.GoyGolPage.TourAdditional </span>
+                                    <br>
+                                    <span> -------------- </span>
+                                    <br>
+                                    <span> BİZİMLƏ ƏLAQƏ: </span>
+                                    <br>
+                                    <span> @Model.GoyGolPage.Number </span>
+                                    <br>
+                                    <span>@Model.GoyGolPage.SecondNumber </span>
+                                    <br>
+                                    <span> Email: @Model.GoyGolPage.Email </span>
+                                    <br>
+                                    <span> @Model.GoyGolPage.SiteAddress </span>
+                                    <br>
+                                    <span> @Model.GoyGolPage.Address </span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="additional">
+                            <div class="title">
+                                TUR HAQQINDA MƏLUMAT
+                            </div>
+
+                            <div class="section">
+                                <div class="labelFull">
+                                    Tura daxildir:
+                                </div>
+
+                                <div class="valueHalf">
+                                    <div class="icon">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                    <span> Transfer </span>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <!--<div class="valueEnd">
+                                    <span class="black">
+                                    BUNDAN AŞAĞI QİYMƏT TAPMISIZ? BİZƏ BİLDİRİN BİZ DAHA SƏRFƏLİ QİYMƏT TƏQDİM EDƏK! </span>
+                                </div> -->
+                            </div>
+                            <div class="actions">
+                                <a href="/Bron/GoyGol" class="buttonOrder">
+
+                                    Bron Et
+                                </a>
+                            </div>
+                        </div>
+                        <div class="help">
+                            <div class="title">
+                                KÖMƏK LAZIMDI?
+                            </div>
+                            <div class="text">
+                                @Model.GoyGolPage.AboutTourText
+                            </div>
+                            <div class="links">
+                                <div class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <span> @Model.GoyGolPage.AboutTourNumber </span>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="contacts">
+
+        <div class="container">
+
+            <form name="sendmessage">
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="titleWrite">
+
+                            BİZƏ YAZIN
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <label for="lname"> Ad </label>
+                        <input type="text" name="lname" id="name" placeholder="Adınızı daxil edin">
+                    </div>
+                    <div class="col-md-4">
+
+                        <label for="lsurname"> Soyad </label>
+                        <input type="text" name="lsurname" id="surname" placeholder="Soyadınızı daxil edin">
+                    </div>
+                    <div class="col-md-4">
+
+                        <label for="lsurname"> Email </label>
+                        <input type="text" name="email" id="email" placeholder="Email ünvanınızı daxil edin">
+                    </div>
+                </div>
+
+                <div class="row">
+
+
+                    <div class="col-md-4">
+                        <label for="number"> Mobil Nömrəniz </label>
+                        <input type="number" id="number" name="number" pattern="[0-9]{3}-[2-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Mobil nömrənizi daxil edin">
+                    </div>
+
+                    <div class="col-md-8">
+                        <label for="text"> Mesajınız</label>
+                        <textarea name="text" id="message" placeholder="Mesajınızı daxil edin"></textarea>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="submitBtn">
+                            <input type="submit" class="button" id="button" value="Məktubu göndərin" data-loading="YÜklənir">
+
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+    </section>
+
+    @section script {
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: "/Home/Footer",
+                    method: "get",
+                    success: function (re) {
+
+                        $(".same").append(re.addreses);
+                        $(".sameTwo").append(re.faxes);
+                        $(".sameThree").append(re.numbers);
+                        $(".sameFour").append(re.mails);
+                        $(".sameFive").append(re.siteadress);
+                        $("#titleee").append(re.title);
+                        $(".longText").append(re.desciption);
+                    }
+                })
+                $("#button").click(function () {
+                    let name = $("#name").val();
+                    let surname = $("#surname").val();
+                    let email = $("#email").val();
+                    let phone = $("#number").val();
+                    let message = $("#message").val();
+                    let __RequestVerificationToken = $("input[name='__RequestVerificationToken']").val();
+                    $.ajax({
+                        url: "/Azerbaijan/GoyGol",
+                        data: {
+                            Name: name,
+                            Surname: surname,
+                            Email: email,
+                            Number: phone,
+                            Messaging: message,
+                            __RequestVerificationToken: __RequestVerificationToken
+                        },
+                        method: "post",
+                        success: function (re) {
+
+                            alert('Message sent');
+                        },
+                        error: function (re) {
+                            alert('Error');
+                        }
+                    })
+                })
+            });
+
+        </script>
+        }
+    </body>
+</html>

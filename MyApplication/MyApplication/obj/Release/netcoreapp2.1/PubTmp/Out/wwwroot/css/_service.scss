@@ -1,0 +1,122 @@
+@import 'reset';
+
+.col-md-12 {
+	margin-top: 50px;
+	}
+
+	.col-md-12 .subtitle
+	{
+	color: #b8b9b9;
+	font-size: 12px;
+	margin: 10px auto 50px;
+	text-align: center;
+	width: 70%;
+	}
+
+	.row .col-md-12 .text p
+	{
+	font-size: 14px;
+	text-align: left;
+	margin-top: -50px;
+	}
+
+
+
+	#services {
+	padding: 25px 0;
+	}
+
+
+
+	#services .container
+	{
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	}
+
+
+	#services .infos {
+	background: #f7f7f7;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	padding-bottom: 80%;
+	position: relative;
+	}
+
+
+	#services .infos a {
+	align-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+	position: absolute;
+	text-decoration: none;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	}
+
+	#services .infos .image {
+	text-align: center;
+	}
+
+
+
+	#services .infos .image img {
+	display: inline-block;
+	height: 50px;
+	}
+
+
+
+	#services .infos .title {
+	color: #000;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 10px 0;
+	text-align: center;
+	text-transform: uppercase;
+	}
+
+
+	#services .infos .text {
+	color: #7f828c;
+	font-size: 12px;
+	text-align: center;
+	}
+
+
+	.col-sm-3 .infos:hover
+	{
+	filter: brightness(80%);
+	}
+
+
+	@media screen and (max-width: 990px)
+	{
+
+	.col-sm-3 .infos
+	{
+	height: 300px;
+	width: 100%;
+	}
+
+	.col-sm-3 .image img
+	{
+	display: flex;
+	margin-top: 20px;
+	}
+
+
+	.col-sm-3 .title
+	{
+	font-size: 9px;
+	}
+
+
+	}

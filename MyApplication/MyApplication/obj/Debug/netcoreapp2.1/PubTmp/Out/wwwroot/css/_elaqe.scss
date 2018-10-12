@@ -1,0 +1,195 @@
+@import 'reset';
+
+.icon .fa-phone
+    {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+
+
+    }
+
+    #elaqe
+    {
+    margin-top: 40px;
+    }
+
+    #elaqe .icon
+    {
+    margin-left: -25px;
+    }
+
+    #elaqe .info2
+    {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding-left: 30px;
+    width: 100%;
+    overflow: hidden;
+    }
+
+    #elaqe .info2 a
+    {
+    align-content: center;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    }
+
+    #elaqe .icon i
+    {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    }
+
+
+
+
+
+    #elaqe .text
+    {
+    display: inline-block;
+    padding-left: 10px;
+    }
+
+    #elaqe .title
+    {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: -21px;
+    margin-left: -10px;
+    }
+
+    #elaqe .subtitle
+    {
+    color: rgb(25, 32, 47);
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: -70px;
+    margin-top:-10px;
+    }
+
+    #elaqe .icon2
+    {
+    margin-left: -25px;
+    }
+
+
+    #elaqe .icon2 i
+    {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    margin-top: 20px;
+    margin-left: -9px;
+    }
+
+
+    #elaqe .text2
+    {
+    display: inline-block;
+    padding-left: 10px;
+    }
+
+    #elaqe .title2
+    {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: -18px;
+    margin-left: -18px;
+    }
+
+    #elaqe .subtitle2
+    {
+    color: rgb(25, 32, 47);
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: -85px;
+    margin-top: 15px;
+    display: flex;
+    }
+
+
+    #elaqe .col-md-3
+    {
+    cursor: pointer;
+    }
+
+    @media screen and (max-width: 193px)
+    {
+    .subtitle, .subtitle2, .subtitle3
+    {
+    margin-top: 10px;
+    }
+    }
+
+    #elaqe .icon3
+    {
+    margin-left: -25px;
+    }
+
+
+    #elaqe .icon3 i
+    {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    margin-top: 20px;
+    margin-left: -17px;
+    }
+
+
+    #elaqe .text3
+    {
+    display: inline-block;
+    padding-left: 10px;
+    }
+
+    #elaqe .title3
+    {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: -18px;
+    margin-left: -30px;
+    }
+
+    #elaqe .subtitle3
+    {
+    color: rgb(25, 32, 47);
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: -71px;
+    margin-top: 15px;
+    display: flex;
+    }
+    .lastContact
+    {
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 70%;
+    margin: 30px auto 10px;
+    }
+
+    .textLast
+    {
+    font-size: 14px;
+    text-align: left;
+    }

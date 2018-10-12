@@ -1,0 +1,163 @@
+.container 
+{
+	width: 100%;
+	margin: auto;
+}
+
+nav {
+	height: 70px;
+}
+
+
+
+nav .navbar a {
+	display: inline-block;
+	font-weight: bold;
+	color:#555;
+	transition:all 0.3s ease-in-out;
+	z-index: 99;
+}
+
+
+nav .navbar a:hover
+{
+	color: #ccc6b3;
+}
+
+
+nav .navbar .sign i 
+{
+	margin-left: 20px;
+	display: inline-block;
+	z-index: 99;
+	cursor: pointer;
+}
+
+#menu-icon
+{
+	display: none;
+	width: 40px;
+	height: 40px;
+	float: right;
+    margin-top: 10px;
+    margin-right: -20px;
+    z-index: 99;
+}
+
+
+.sign .fa-facebook:hover
+{
+	transition: all 0.6s ease-in-out;
+	transform: rotate(360deg);
+	color:#546d96;
+}
+
+.sign .fa-instagram:hover
+{
+	transition: all 0.6s ease-in-out;
+	transform: rotate(360deg);
+	color:#ea2c2c;
+}
+
+
+	@media screen and (max-width: 768px)
+	{
+	nav .navbar a
+	{
+	display: none;
+	font-size: 10px;
+	z-index: 999;
+	width: 300px;
+	}
+
+	nav .navbar .sign i
+	{
+	display: none;
+	font-size: 10px;
+	z-index: 999;
+	}
+
+
+	.navbar
+	{
+	width: 130px;
+	}
+
+	#menu-icon
+	{
+	display: inline-block;
+	top:0;
+	}
+
+	.navbar:hover a
+	{
+	display: inline-block;
+	width: 100%;
+	padding: 4% 0;
+	background: rgba(186, 195, 211, 0.5);
+	color: white;			
+
+	}
+
+
+	.sign:hover a
+	{
+	display: block;
+	}
+
+
+	.navbar a, nav:active a
+	{
+	display: none;
+	z-index: 1000;
+	width: 70%;
+
+	}
+
+	#vip .title
+	{
+		font-size: 15px;
+	}
+
+
+	.fa-location-arrow
+	{
+		margin-left: 110px;
+	}
+
+	.fa-envelope {
+		margin-left: 35px;
+	}
+
+	#hover .text-uppercase
+	{
+		margin-left: 40px;
+	}
+
+	.sa h5
+	{
+		margin-right: 30px;
+	}
+
+	#footerF .sa h5
+	{
+		margin-left:70px;
+	}
+
+
+	#veSon h5{
+		margin-right: 30px;
+	}
+
+	#tours .time i
+	{
+		margin-left: 70px;
+	}
+
+	#tours .heading
+	{
+		margin-top: 50px;
+	}
+
+	
+	}

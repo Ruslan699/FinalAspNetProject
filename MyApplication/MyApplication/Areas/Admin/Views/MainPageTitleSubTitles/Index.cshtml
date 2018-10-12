@@ -1,0 +1,94 @@
+﻿@model IEnumerable<MyApplication.Models.MainPageTitleSubTitle>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Create Main Page Model</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstSlide)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstSlideText)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SecondSlide)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SecondSlideText)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ThirdSlide)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ThirdSlideText)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FourthSlide)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FourthSlideText)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstSlide)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstSlideText)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SecondSlide)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SecondSlideText)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ThirdSlide)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ThirdSlideText)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FourthSlide)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FourthSlideText)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

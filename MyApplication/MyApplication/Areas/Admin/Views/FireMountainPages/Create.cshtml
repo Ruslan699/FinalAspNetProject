@@ -1,0 +1,162 @@
+﻿@model MyApplication.Models.FireMountainPage
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Create Fire Mountain</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ImagePath" class="control-label"></label>
+                <input asp-for="ImagePath" class="form-control" />
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageText" class="control-label"></label>
+                <input asp-for="ImageText" class="form-control" />
+                <span asp-validation-for="ImageText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubTitle" class="control-label"></label>
+                <input asp-for="SubTitle" class="form-control" />
+                <span asp-validation-for="SubTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Duration" class="control-label"></label>
+                <input asp-for="Duration" class="form-control" />
+                <span asp-validation-for="Duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Code" class="control-label"></label>
+                <input asp-for="Code" class="form-control" />
+                <span asp-validation-for="Code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutTourText" class="control-label"></label>
+                <input asp-for="AboutTourText" class="form-control" />
+                <span asp-validation-for="AboutTourText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutTourNumber" class="control-label"></label>
+                <input asp-for="AboutTourNumber" class="form-control" />
+                <span asp-validation-for="AboutTourNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TourImage" class="control-label"></label>
+                <input id="tourimage" accept="image/*" name="TourImage" type="file" class="form-control" />
+                <span asp-validation-for="TourImage" class="text-danger"></span>
+            </div>
+
+            <img id="photo" style="display:none; max-width:100%" />
+            <div class="form-group">
+                <label asp-for="TourName" class="control-label"></label>
+                <input asp-for="TourName" class="form-control" />
+                <span asp-validation-for="TourName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TourInformation" class="control-label"></label>
+                <input asp-for="TourInformation" class="form-control" />
+                <span asp-validation-for="TourInformation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TourVideo" class="control-label"></label>
+                <input asp-for="TourVideo" class="form-control" />
+                <span asp-validation-for="TourVideo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TourCheckIn" class="control-label"></label>
+                <input asp-for="TourCheckIn" class="form-control" />
+                <span asp-validation-for="TourCheckIn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TourText" class="control-label"></label>
+                <input asp-for="TourText" class="form-control" />
+                <span asp-validation-for="TourText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TourTime" class="control-label"></label>
+                <input asp-for="TourTime" class="form-control" />
+                <span asp-validation-for="TourTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TourAdditional" class="control-label"></label>
+                <input asp-for="TourAdditional" class="form-control" />
+                <span asp-validation-for="TourAdditional" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TourAdditionalSecond" class="control-label"></label>
+                <input asp-for="TourAdditionalSecond" class="form-control" />
+                <span asp-validation-for="TourAdditionalSecond" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Number" class="control-label"></label>
+                <input asp-for="Number" class="form-control" />
+                <span asp-validation-for="Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondNumber" class="control-label"></label>
+                <input asp-for="SecondNumber" class="form-control" />
+                <span asp-validation-for="SecondNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteAddress" class="control-label"></label>
+                <input asp-for="SiteAddress" class="form-control" />
+                <span asp-validation-for="SiteAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script>
+
+    tourimage.addEventListener("change", function (e) {
+        var r = new FileReader();
+
+        r.readAsDataURL(e.target.files[0])
+
+        r.onloadend = function () {
+            photo.style.display = "block";
+
+            photo.src = r.result;
+
+        }
+
+    });
+</script>

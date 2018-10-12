@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Этот файл используется процессом публикации или упаковки вашего веб-проекта. Можно настроить поведение этого процесса,
+изменив этот файл MSBuild. Подробности см. на странице https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+3WHJLA2T0O299grsNZxOAAAAAACAAAAAAAQZgAAAAEAACAAAABKWFJcc1DxzJsgtpxcbvMlpMMOTDdi/Xh4uypLpNH/tgAAAAAOgAAAAAIAACAAAACGnFsL1CxL5USeP3p709d57nUygOVZIWLuASJHuVNLfYAAAAChFyjcN0lWQyidCKur1DO76vCEuACr7glBQ8wXRgcudenikXavqTyE+O839fDx9CDpIoXNG2uUHetcGewPs0QDxi/dz6/F7AFs/kyc/kgkyT+otXyibZyvh4K/4tqhNMjMvnK2kAnIWTIxzqX+SDzcZWMNPAcO8IAeckBlLz4sMkAAAADm3zLXJ0ZesLBlfXa45tmOS/noGBUvh8t4eZs9/aJkcA9Shm+rq6oGCEEFQ3uNQs78U46/2bynDI21slLO1R1a</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:restraveldb.database.windows.net,1433;Initial Catalog=mefhfjgfj;Persist Security Info=True;User ID=restravelAdmin;Password=Salahov699;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

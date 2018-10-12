@@ -1,0 +1,173 @@
+@import 'reset';
+
+#incomingTours .col-lg-4 
+	{
+	width: 300px;
+	height: 300px;
+	margin-top: 50px;
+	cursor: pointer;
+
+	}
+
+
+	#incomingTours .col-lg-4 img
+	{
+	position: relative;
+	object-fit: cover;
+	width: 300px;
+	height: 300px;
+	}
+
+	#incomingTours .col-lg-4 .fa-star
+	{
+	position: absolute;
+	font-size: 10px;
+	color: yellow;
+	margin-top: 22px;
+	margin-left: -60px;
+
+	}
+
+
+	#incomingTours .col-lg-4 #secondRate
+	{
+	position: absolute;
+	font-size: 10px;
+	color: yellow;
+	top: -18px;
+	margin-right: 3px;
+	padding: 18px;
+
+	}
+
+	#incomingTours .col-lg-4 #thirdRate
+	{
+	position: absolute;
+	font-size: 10px;
+	color: yellow;
+	margin-top: 22px;
+	margin-left: -22px;
+	}
+
+	#incomingTours .col-lg-4 h4
+	{
+	position: absolute;
+	color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+	letter-spacing: 1px;
+	padding: 10px 0;
+	top: 10px;
+	left: 50px;
+	text-shadow: 0 1px 3px rgba(0,0,0,.2);
+	text-transform: uppercase;
+	}
+
+
+	#incomingTours .col-lg-4 h4:hover
+	{
+	color: yellow;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	}
+
+
+
+	#incomingTours .col-lg-4 .Goygol, .Qebele, .Lankaran
+	{
+	color: #fff;
+	font-size: 12px;
+	padding: 10px 0;
+	text-shadow: 0 1px 3px rgba(0,0,0,.2);
+	position: absolute;
+	bottom: 55px;
+	right: 133px;
+
+	}
+
+
+	#incomingTours .col-lg-4 img:hover
+	{
+	transition: all 0.3s ease-in-out;
+	filter: brightness(50%);
+	cursor: pointer;
+	}
+
+
+	.col-lg-4 .fa-calendar-alt
+	{
+	display: inline-block;
+	position: absolute;
+	color: #fff;
+	left: 50px;
+	top: 50px;
+
+	}
+
+	.col-lg-4 .text
+	{
+	color:#fff;
+	font-size: 12px;
+	display: inline-block;
+	color: #fff;
+	position: absolute;
+	font-size: 12px;
+	top: 50px;
+	left: 70px;
+	}
+
+
+
+	.col-lg-4 button
+	{
+	position: absolute;
+	width: 100px;
+	height: 32px;
+	font-weight: bold;
+	background-color: yellow;
+	border-color: yellow;
+	border-radius: 5px;
+	bottom: 10px;
+	left: 111px;
+	}
+
+
+	.col-lg-4 button:hover
+	{
+	color:#adaa75;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	}
+
+
+
+	@media screen and (max-width: 1200px)
+
+	{ 	
+
+	
+
+	#incomingTours .fa-star
+	{
+		display: none;
+	}
+	#incomingTours .col-lg-4 .Goygol,.Qebele, .Lankaran
+	{
+	margin-left:40px;
+	}
+
+}
+
+@media screen and (max-width: 991px)
+{
+    .res {
+       margin-left: 30px;
+    }
+}
+
+@media screen and (max-width:768px)
+{
+    .res{
+        margin-left: -2px;
+    }
+}

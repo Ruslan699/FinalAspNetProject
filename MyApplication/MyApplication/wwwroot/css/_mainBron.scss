@@ -1,0 +1,233 @@
+#bronInfo
+{
+	margin-top: 50px;
+}
+
+#bronInfo .title
+{
+	    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#bronInfo .contacts label
+{
+	align-items: center;
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+}
+
+#bronInfo .contacts input
+{
+	background: #f8f9f6;
+    border: 1px solid #f8f9f6;
+    border-radius: 20px;
+    color: #757575;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 30px;
+    outline: 0;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+#bronInfo .contacts textarea
+{
+	background: #f8f9f6;
+    border: 1px solid #f8f9f6;
+    border-radius: 20px;
+    color: #757575;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 30px;
+    outline: 0;
+    padding: 10px 20px;
+    width: 100%;
+    min-height: 120px;
+}
+
+#bronInfo .actionsLeft
+{
+	text-align: left;
+}
+
+.btnFinishOrder
+{
+	background: #e79623;
+    border: 0;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+    outline: 0;
+    padding: 15px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#bronInfo .additional
+    {
+    	background: #faf9fa;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 25px;
+    }
+
+    #bronInfo .additional .title
+    {
+    	    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    }
+
+    #bronInfo .additional .section
+    {
+    	overflow: hidden;
+   	 padding: 10px 0;
+    }
+
+
+
+ #bronInfo .additional .section .name
+ {
+ 	color: #353d4d;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+ }
+
+ #bronInfo .section .value
+ {
+ 	    align-items: center;
+    color: #e79623;
+    display: flex;
+    position: relative;
+    text-transform: uppercase;
+ }
+
+ #bronInfo .additional label
+ {
+ 	    margin: 5px;
+    padding-left: 5px;
+ }
+
+ #bronInfo .additional .labelFull
+ {
+ 	display: block;
+ 	color: #353d4d;
+    font-weight: 700;
+    text-transform: uppercase;
+ }
+
+ #bronInfo .additional .valueHalf
+ {
+ 	    align-items: center;
+    color: #e79623;
+    display: flex;
+    position: relative;
+    text-transform: uppercase;
+        float: left;
+    width: 50%;
+ }
+
+ #bronInfo .additional .icon
+ {
+ 	display: inline-block;
+    margin-right: 10px;
+ }
+
+ #bronInfo .additional .icon i
+ {
+ 	color: black;
+ }
+
+ #bronInfo .black
+ {
+ 	    color: #353d4d;
+ }
+
+ #bronInfo .additional .actions
+ {
+ 	    font-size: 14px;
+    font-weight: 700;
+    padding-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+ }
+
+
+  #bronInfo .help .title
+  {
+  	    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+
+  #bronInfo .help
+  {
+  	    background: #f8f7fa;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 0;
+    padding: 25px;
+    position: relative;
+  }
+
+  #bronInfo .help .text
+  {
+  	    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  #bronInfo .links
+  {
+  	    color: #000;
+    display: block;
+    font-size: 14px;
+    margin: 10px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+#bronInfo .links .icon
+{
+	    display: inline-block;
+    height: 30px;
+    margin-right: 10px;
+    width: 30px;
+   
+
+}
+
+#bronInfo .links span
+{
+	margin-left: -20px;
+}
+
+#bronInfo .links .icon i
+{
+	 color:#e79623;
+}
+
+#bronInfo a
+{
+    text-decoration: none;
+}
+
+#bronInfo a:hover
+{
+    transition: all 0.4s ease-in-out;
+    color:#6d6252;
+
+}

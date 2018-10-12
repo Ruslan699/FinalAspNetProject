@@ -1,0 +1,61 @@
+﻿@model MyApplication.Models.BronBilgeh
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>BronBilgeh</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ImagePath" class="control-label"></label>
+                <input id="imagepath" accept="image/*" name="ImagePath" type="file" class="form-control" />
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            </div>
+            <img id="photo" style="display:none; max-width:100%" />
+            <div class="form-group">
+                <label asp-for="ImageTitle" class="control-label"></label>
+                <input asp-for="ImageTitle" class="form-control" />
+                <span asp-validation-for="ImageTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutTourText" class="control-label"></label>
+                <input asp-for="AboutTourText" class="form-control" />
+                <span asp-validation-for="AboutTourText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutTourNumber" class="control-label"></label>
+                <input asp-for="AboutTourNumber" class="form-control" />
+                <span asp-validation-for="AboutTourNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script>
+
+    imagepath.addEventListener("change", function (e) {
+        var r = new FileReader();
+        r.readAsDataURL(e.target.files[0])
+
+          r.onloadend = function () {
+            photo.style.display = "block";
+
+            photo.src = r.result;
+        }
+
+    });
+</script>

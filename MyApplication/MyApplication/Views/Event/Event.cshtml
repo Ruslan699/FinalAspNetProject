@@ -1,0 +1,223 @@
+﻿@model MyApplication.Models.ViewModels.EventModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Event</title>
+</head>
+<body>
+    <nav>
+
+
+        <div class="container">
+
+            <div class="navbar">
+
+                <a href="#" id="menu-icon"> <i class="fas fa-bars"></i> </a>
+
+                <a href="/About"> Haqqımızda </a>
+
+
+                <a href="/Azerbaijan"> Azərbaycan </a>
+
+
+                <a href="/Service"> Xidmətlər </a>
+
+
+
+                <a href="/Event"> Coming Events </a>
+
+
+
+                <a href="/OnlinePayment"> Online Odəniş </a>
+
+
+
+                <a href="/Contact">
+                    Əlaqə
+                </a>
+
+                <li class="sign">
+                    <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook">
+
+                        </i>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+
+            </div>
+        </div>
+
+
+    </nav>
+
+    <section id="main">
+
+        <div class="col-sm-12">
+            <img src="~/images/@Model.TitleAndSubTitle.ImagePath">
+        </div>
+
+    </section>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="textype">
+
+                    <p> @Model.TitleAndSubTitle.Title</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <section id="control">
+        <div class="container">
+            <div class="row">
+
+                @foreach (var item in Model.Events)
+                {
+                    <div class="col-lg-4">
+                        <img src="~/images/@item.EventImage">
+                        <i class="fas @item.EventIcon"></i>
+                        <i id="secondRate" class="fas @item.EventIcon"></i>
+                        <i id="thirdRate" class="fas @item.EventIcon"></i>
+                        <h4> @item.EventName </h4>
+                        <span class="Baku">@item.EventTitle </span>
+                        <i class="@item.EventTime"></i>
+
+                        <span class="text"> @item.Duration </span>
+
+                        <a href="@item.EventAction"> <button> Daha Ətraflı</button></a>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contacts">
+
+        <div class="container">
+
+            <form name="sendmessage">
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="titleWrite">
+
+                            BİZƏ YAZIN
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <label for="lname"> Ad </label>
+                        <input type="text" name="lname" id="name" placeholder="Adınızı daxil edin">
+                    </div>
+                    <div class="col-md-4">
+
+                        <label for="lsurname"> Soyad </label>
+                        <input type="text" name="lsurname" id="surname" placeholder="Soyadınızı daxil edin">
+                    </div>
+                    <div class="col-md-4">
+
+                        <label for="lsurname"> Email </label>
+                        <input type="text" name="email" id="email" placeholder="Email ünvanınızı daxil edin">
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <label for="number"> Mobil Nömrəniz </label>
+                        <input type="number" id="number" name="number" pattern="[0-9]{3}-[2-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Mobil nömrənizi daxil edin">
+                    </div>
+
+                    <div class="col-md-8">
+                        <label for="text"> Mesajınız</label>
+                        <textarea name="text" id="message" placeholder="Mesajınızı daxil edin"></textarea>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="submitBtn">
+                            <input type="submit" class="button" id="button" value="Məktubu göndərin" data-loading="YÜklənir">
+
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+    </section>
+
+    @section script {
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: "/Home/Footer",
+                    method: "get",
+                    success: function (re) {
+
+                        $(".same").append(re.addreses);
+                        $(".sameTwo").append(re.faxes);
+                        $(".sameThree").append(re.numbers);
+                        $(".sameFour").append(re.mails);
+                        $(".sameFive").append(re.siteadress);
+                        $("#titleee").append(re.title);
+                        $(".longText").append(re.desciption);
+                    }
+                })
+
+                $("#button").click(function () {
+                    let name = $("#name").val();
+                    let surname = $("#surname").val();
+                    let email = $("#email").val();
+                    let phone = $("#number").val();
+                    let message = $("#message").val();
+                    let __RequestVerificationToken = $("input[name='__RequestVerificationToken']").val();
+                    $.ajax({
+                        url: "/Event",
+                        data: {
+                            Name: name,
+                            Surname: surname,
+                            Email: email,
+                            Number: phone,
+                            Messaging: message,
+                            __RequestVerificationToken: __RequestVerificationToken
+                        },
+                        method: "post",
+                        success: function (re) {
+                           
+                            alert('Message sent');
+                        },
+                        error: function (re) {
+                            alert('Error');
+                        }
+                    })
+            })
+            });
+
+        </script>
+    }
+</body>
+</html>

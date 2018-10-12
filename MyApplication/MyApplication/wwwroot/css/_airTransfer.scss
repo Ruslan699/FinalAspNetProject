@@ -1,0 +1,165 @@
+@import 'reset';
+
+
+#subMain .icon
+{
+margin-left: -25px;
+}
+
+#subMain .info2
+{
+align-content: center;
+display: flex;
+flex-direction: column;
+height: 100%;
+justify-content: center;
+padding-left: 30px;
+width: 100%;
+overflow: hidden;
+}
+
+#subMain .info2 a
+{
+align-content: center;
+display: flex;
+justify-content: flex-start;
+text-decoration: none;
+}
+
+#subMain .icon i
+{
+align-content: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+color: black;
+}
+#subMain .text
+{
+display: inline-block;
+padding-left: 10px;
+}
+
+#subMain .title
+{
+color: rgb(0, 0, 0);
+font-size: 16px;
+font-weight: 700;
+margin-top: -21px;
+margin-left: -10px;
+}
+
+#subMain .proposalText 
+{
+    margin-top: -50px;
+}
+
+#subMain .subtitle
+{
+    color: #19202f;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inherit;
+    margin-left: -72px;
+    margin-top: 7px;
+}
+
+#subMain .icon2
+{
+margin-left: -25px;
+}
+
+
+#subMain .icon2 i
+{
+align-content: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+color: black;
+margin-top: -16px;
+margin-left: -9px;
+}
+
+
+#subMain .text2
+{
+display: inline-block;
+padding-left: 10px;
+}
+
+#subMain .title2
+{
+color: rgb(0, 0, 0);
+font-size: 16px;
+font-weight: 700;
+margin-top: -18px;
+margin-left: -18px;
+}
+
+#subMain .subtitle2
+{
+color: rgb(25, 32, 47);
+font-size: 14px;
+text-transform: uppercase;
+margin-left: -85px;
+margin-top: 15px;
+display: flex;
+}
+
+
+#transportation .col-md-3
+{
+cursor: pointer;
+}
+
+@media screen and (max-width: 193px)
+{
+.subtitle, .subtitle2, .subtitle3
+{
+margin-top: 10px;
+}
+}
+
+#subMain .icon3
+{
+margin-left: -25px;
+}
+
+
+#subMain .icon3 i
+{
+align-content: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+color: black;
+margin-top: 20px;
+margin-left: -17px;
+}
+
+
+#subMain .text3
+{
+display: inline-block;
+padding-left: 10px;
+}
+
+#subMain .title3
+{
+color: rgb(0, 0, 0);
+font-size: 16px;
+font-weight: 700;
+margin-top: -18px;
+margin-left: -30px;
+}
+
+#subMain .subtitle3
+{
+color: rgb(25, 32, 47);
+font-size: 14px;
+text-transform: uppercase;
+margin-left: -71px;
+margin-top: 15px;
+display: flex;
+}

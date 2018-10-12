@@ -1,0 +1,14 @@
+@import 'reset';
+
+@media screen and (max-width:768px)
+{
+    #tours .endTour
+    {
+        margin-left: -60px;
+    }
+
+    #tours .time 
+    {
+        margin-top: -10px;
+    }
+}

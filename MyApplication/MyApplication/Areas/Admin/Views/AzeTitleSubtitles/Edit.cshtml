@@ -1,0 +1,77 @@
+﻿@model MyApplication.Models.AzeTitleSubtitle
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>AzeTitleSubtitle</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="FirstSlide" class="control-label"></label>
+                <input asp-for="FirstSlide" class="form-control" />
+                <span asp-validation-for="FirstSlide" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstSlideText" class="control-label"></label>
+                <input asp-for="FirstSlideText" class="form-control" />
+                <span asp-validation-for="FirstSlideText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondSlide" class="control-label"></label>
+                <input asp-for="SecondSlide" class="form-control" />
+                <span asp-validation-for="SecondSlide" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondSlideText" class="control-label"></label>
+                <input asp-for="SecondSlideText" class="form-control" />
+                <span asp-validation-for="SecondSlideText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThirdSlide" class="control-label"></label>
+                <input asp-for="ThirdSlide" class="form-control" />
+                <span asp-validation-for="ThirdSlide" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThirdSlideText" class="control-label"></label>
+                <input asp-for="ThirdSlideText" class="form-control" />
+                <span asp-validation-for="ThirdSlideText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FourthSlide" class="control-label"></label>
+                <input asp-for="FourthSlide" class="form-control" />
+                <span asp-validation-for="FourthSlide" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FourthSlideText" class="control-label"></label>
+                <input asp-for="FourthSlideText" class="form-control" />
+                <span asp-validation-for="FourthSlideText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubTitle" class="control-label"></label>
+                <input asp-for="SubTitle" class="form-control" />
+                <span asp-validation-for="SubTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
